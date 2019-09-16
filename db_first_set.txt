@@ -1,0 +1,33 @@
+CREATE TABLE `fb_user` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(80) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  `term` varchar(40) DEFAULT NULL,
+  `pageUrl` varchar(2000) DEFAULT NULL,
+  `likeStart` int(11) DEFAULT '0',
+  `likeEnd` int(11) DEFAULT '0',
+  `grade` int(11) DEFAULT '0',
+  `license` varchar(2) DEFAULT 'Y',
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+INSERT INTO solution.fb_user(
+   email
+  ,pwd
+  ,term
+  ,pageUrl
+  ,likeStart
+  ,likeEnd
+  ,grade
+  ,license
+) VALUES (
+   'test@naver.com'  -- email - IN varchar(80)
+  ,'9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08'  -- pwd - IN varchar(255) -- test
+  ,'20170909'  -- term - IN varchar(40)
+  ,''  -- pageUrl - IN varchar(2000)
+  ,0   -- likeStart - IN int(11)
+  ,0   -- likeEnd - IN int(11)
+  ,999   -- grade - IN int(11)
+  ,'Y'  -- license - IN varchar(2)
+);

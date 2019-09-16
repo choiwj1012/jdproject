@@ -1,0 +1,740 @@
+@CHARSET "UTF-8";
+
+.line .common {
+	width : 100%;
+	text-align: center;
+}
+
+#header h1{position:relative; }
+#header h1 a{display:block;line-height:45px;padding:0 0px 0 0px;color:#fff; overflow:hidden}
+#header .inner a #logoimage{
+	width: 70%;
+}
+/* 줄어들때마다 글자 크기를 줄여주는 css start*/
+
+@media all and (min-width:1024px) and (max-width:1200px) {
+
+	form #freebutton {
+		margin-left : 5%;
+	}
+	.row #center1 {
+		margin-top : -27px;
+	}
+	.n img {
+		width: 100%;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:18px;}
+	input[type=text]:-moz-placeholder {font-size:18px;}
+	input[type=text]::-moz-placeholder {font-size:18px;}
+	input[type=text]:-ms-input-placeholder {font-size:18px;}
+	form #freebutton {
+		font-size : 39px;
+	}
+
+}
+@media all and (min-width:991px) and (max-width: 1024px) {
+	form #freebutton {
+		margin-left : 5%;
+	}
+	.row #center1 {
+		margin-top : 35px;
+	}
+	.n img {
+		width: 100%;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:18px;}
+	input[type=text]:-moz-placeholder {font-size:18px;}
+	input[type=text]::-moz-placeholder {font-size:18px;}
+	input[type=text]:-ms-input-placeholder {font-size:18px;}
+	form #freebutton {
+		font-size : 39px;
+	}
+}
+ @media all and (min-width:770px) and (max-width:991px) {
+
+	form #freebutton {
+		margin-left : 6%;
+		/* font-size :25px; */
+	}
+	.n img {
+		width: 100%;
+	}	
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -3.6%;
+	}
+	form #inTel {
+		/* width: 230px; */
+		margin-bottom : 2%;
+		/* font-size :25px;  */
+	}
+	form #inName{
+		/* font-size :25px;
+		width: 230px; */
+	}
+	#center1 {
+		margin-top : 32px;
+	}
+	
+	input[type=text]::-webkit-input-placeholder {font-size:18px;}
+	input[type=text]:-moz-placeholder {font-size:18px;}
+	input[type=text]::-moz-placeholder {font-size:18px;}
+	input[type=text]:-ms-input-placeholder {font-size:18px;}
+
+}
+
+@media all and (min-width:767px) and (max-width:771px) {
+
+	.n img {
+		width: 100%;
+	}	
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -3.6%;
+	}
+
+	#center1 {
+		margin-top : 30px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:15px;}
+	input[type=text]:-moz-placeholder {font-size:15px;}
+	input[type=text]::-moz-placeholder {font-size:15px;}
+	input[type=text]:-ms-input-placeholder {font-size:15px;}
+	
+}
+ @media all and (min-width:750px) and (max-width:767px) {
+	
+	form #freebutton {
+		margin-left : 6%;
+		font-size: 30px;
+	}
+	.n img {
+		width: 100%;
+	}	
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -3.6%;
+	}
+	form #inTel {
+		width: 270px;
+		margin-bottom : 2%;
+		font-size: 35px; 
+	}
+	#center1 {
+		margin-top : 52px;
+	}
+	form #inName{
+		font-size :35px;
+		width: 270px;
+	}	
+	input[type=text]::-webkit-input-placeholder {font-size:15px;}
+	input[type=text]:-moz-placeholder {font-size:15px;}
+	input[type=text]::-moz-placeholder {font-size:15px;}
+	input[type=text]:-ms-input-placeholder {font-size:15px;}	
+} 
+ @media all and (min-width:700px) and (max-width:750px) {
+
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -3.6%;
+	}
+	form #inName{
+		font-size :35px;
+		width:250px;
+	}
+	form #inTel {
+		
+		width:250px;
+		font-size : 35px;
+		margin-bottom : 2%; 
+	}
+	form #freebutton{ 
+		font-size: 27px;
+		margin-left : 6%;
+		
+	}
+	#center1 {
+		margin-top : 52px;
+	}
+	.line .container {
+	padding-right: 24px;
+	padding-left: 24px;
+	}
+	.n img {
+		width: 100%;
+	}	
+	input[type=text]::-webkit-input-placeholder {font-size:15px;}
+	input[type=text]:-moz-placeholder {font-size:15px;}
+	input[type=text]::-moz-placeholder {font-size:15px;}
+	input[type=text]:-ms-input-placeholder {font-size:15px;}
+} 
+ @media all and (min-width:600px) and (max-width:700px) {
+	.n img {
+		width: 100%;
+	}
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -4.6%;
+	}
+	form #inName{
+		font-size :30px;
+		width:250px;
+	}
+	form #inTel {
+		
+		width:250px;
+		font-size : 30px;
+		margin-bottom : 2%; 
+	}
+	form #freebutton{ 
+		font-size: 25px;
+		margin-left : 6%;
+		
+	}
+	#center1 {
+		margin-top : 52px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:15px;}
+	input[type=text]:-moz-placeholder {font-size:15px;}
+	input[type=text]::-moz-placeholder {font-size:15px;}
+	input[type=text]:-ms-input-placeholder {font-size:15px;}	
+} 
+
+ @media all and (min-width:581px) and (max-width:600px) {
+	.n img {
+		width: 100%;
+	}
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -4.6%;
+	}
+	form #inName{
+		font-size :20px;
+		width:200px;
+	}
+	form #inTel {
+		
+		width:200px;
+		font-size : 20px;
+		margin-bottom : 2%; 
+	}
+	form #freebutton{ 
+		font-size: 20px;
+		margin-left : 8%;
+		
+	}
+	#center1 {
+		margin-top : 58px;
+	}	
+	input[type=text]::-webkit-input-placeholder {font-size:10px;}
+	input[type=text]:-moz-placeholder {font-size:10px;}
+	input[type=text]::-moz-placeholder {font-size:10px;}
+	input[type=text]:-ms-input-placeholder {font-size:10px;}	
+
+} 
+ @media all and (min-width:500px) and (max-width:581px) {
+	.n img {
+		width: 100%;
+	}
+	#contact .col-sm-12 #inputFormId {
+		margin-top : 3%;
+		margin-left : -4.6%;
+	}
+	form #inName{
+		font-size :20px;
+		width:200px;
+	}
+	form #inTel {
+		
+		width:200px;
+		font-size : 20px;
+		margin-bottom : 2%; 
+	}
+	form #freebutton{ 
+		font-size: 20px;
+		margin-left : 8%;
+		
+	}
+	#center1 {
+		margin-top : 15px;
+	}
+	.line .container {
+	padding-right: 24px;
+	padding-left: 24px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:10px;}
+	input[type=text]:-moz-placeholder {font-size:10px;}
+	input[type=text]::-moz-placeholder {font-size:10px;}
+	input[type=text]:-ms-input-placeholder {font-size:10px;}		
+} 
+
+@media all and (min-width:440px) and (max-width:500px) {
+	.n img {
+		width: 100%;
+	}
+	form #inName{
+		font-size :15px;
+		width:150px;
+		
+	}
+	form #inTel{
+		font-size: 15px;
+		width: 150px;
+		
+	}
+	form #freebutton{ 
+		font-size: 15px;
+		margin-left : 9%;
+		
+		
+	}
+	#contact #inputFormId {
+		margin-top : 3%;
+		margin-left : -4.6%;
+	}
+	#center1 {
+		margin-top : 25px;
+	}
+	.line .container {
+	padding-right: 27px;
+	padding-left: 27px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:8px;}
+	input[type=text]:-moz-placeholder {font-size:8px;}
+	input[type=text]::-moz-placeholder {font-size:8px;}
+	input[type=text]:-ms-input-placeholder {font-size:8px;}		
+}
+
+@media all and (min-width:416px) and (max-width:440px) {
+	.n img {
+		width: 100%;
+	}
+	form #inName{
+		font-size :15px;
+		width:150px;
+	}
+	form #inTel{
+		font-size: 15px;
+		width: 150px;
+	}
+	form #freebutton{ 
+		font-size: 15px;
+		margin-left: 10%;
+		
+	}
+	#contact #inputFormId {
+		margin-top : 3%;
+		margin-left : -5.6%;
+	}
+	#center1 {
+		margin-top : 20px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:8px;}
+	input[type=text]:-moz-placeholder {font-size:8px;}
+	input[type=text]::-moz-placeholder {font-size:8px;}
+	input[type=text]:-ms-input-placeholder {font-size:8px;}
+
+}
+
+@media all and (min-width:386px) and (max-width:416px) {
+	.n img {
+		width: 100%;
+	}
+	form #inName{
+		font-size :12px;
+		width:120px;
+	}
+	form #inTel{
+		font-size: 12px;
+		width: 120px;
+	}
+	form #freebutton{ 
+		font-size: 12px;
+		margin-left: 11%;
+		
+	}
+	#contact #inputFormId {
+		margin-top : 3%;
+		margin-left : -5.6%;
+	}
+	#center1 {
+		margin-top : 25px;
+	}
+	
+	center .inputLine {
+		margin-top : 0px;
+	}
+	.line .container {
+	padding-right: 26px;
+	padding-left: 26px;
+	}
+	input[type=text]::-webkit-input-placeholder {font-size:8px;}
+	input[type=text]:-moz-placeholder {font-size:8px;}
+	input[type=text]::-moz-placeholder {font-size:8px;}
+	input[type=text]:-ms-input-placeholder {font-size:8px;}
+
+}
+
+@media all and (min-width:341px) and (max-width:386px) {
+	.n img {
+		width: 100%;
+	}
+	form #inName{
+		font-size :10px;
+		width:110px;
+	}
+	form #inTel{
+		font-size: 10px;
+		width: 110px;
+	}
+	form #freebutton{ 
+		font-size: 10px;
+		margin-left: 11%;
+		
+	}
+	#contact #inputFormId {
+		margin-top : -1%;
+		margin-left : -5.6%;
+	}
+	#center1 {
+		margin-top : 25px;
+	}	
+	center .inputLine {
+		margin-top : 0px;
+	}
+	
+	input[type=text]::-webkit-input-placeholder {font-size:8px;}
+	input[type=text]:-moz-placeholder {font-size:8px;}
+	input[type=text]::-moz-placeholder {font-size:8px;}
+	input[type=text]:-ms-input-placeholder {font-size:8px;}
+	.line .container {
+	padding-right: 28px;
+	padding-left: 28px;
+	}
+}
+
+@media all and (min-width:270px) and (max-width:341px) {
+	.n img {
+		width: 100%;
+	}	
+	#labelName {
+		font-size : 10px;
+	}
+	
+	#labelTel {
+		font-size : 10px;
+	}
+	
+	form #inName{
+		font-size :10px;
+		width:100px;
+	}
+	form #inTel{
+		font-size: 10px;
+		width: 100px;
+	}
+	form #freebutton{ 
+		font-size: 8px;
+		margin-left : 9%;
+	}
+	#contact #inputFormId {
+		margin-top : 5%;
+		margin-left : -5.6%;
+	}
+	
+	form .inputLine {
+	
+	margin-top: 0;
+	margin-bottom: 0;
+
+    }
+	input[type=text]::-webkit-input-placeholder {font-size:8px;}
+	input[type=text]:-moz-placeholder {font-size:8px;}
+	input[type=text]::-moz-placeholder {font-size:8px;}
+	input[type=text]:-ms-input-placeholder {font-size:8px;}
+	.line .container {
+	padding-right: 32px;
+	padding-left: 32px;
+	}
+}
+
+@media all and (max-width:270px) {
+	.n img {
+		width: 100%;
+	}
+	#labelName {
+		font-size : 10px;
+	}
+	
+	#labelTel {
+		font-size : 10px;
+	}
+	
+	form #inName{
+		font-size :7px;
+		width:70px;
+	}
+	form #inTel{
+		font-size: 7px;
+		width: 70px;
+	}
+	form #freebutton{ 
+		font-size: 2px;
+	}
+	#contact #inputFormId {
+		margin-top : -1%;
+		margin-left : -5.6%;
+	}
+	
+	form .inputLine {
+	
+	margin-top: 0;
+	margin-bottom: 0;
+
+    }
+	input[type=text]::-webkit-input-placeholder {font-size:7px;}
+	input[type=text]:-moz-placeholder {font-size:7px;}
+	input[type=text]::-moz-placeholder {font-size:7px;}
+	input[type=text]:-ms-input-placeholder {font-size:7px;}
+	.line .container {
+	padding-right: 35px;
+	padding-left: 35px;
+	}
+	
+}
+/* end */
+
+/* 헤더 부분관련 css start */
+@media all and (min-width:1024px) and (max-width:1500px) {
+
+}
+@media all and (max-width:1200px) {
+	
+	.list {
+		display: none;
+	}
+	
+}
+
+@media all and (min-width:1024px){
+
+	.n img {
+		width: 70%;
+	}
+
+	
+	form .inputLine {
+	
+	margin-top: -5px;
+	margin-bottom: 18px;
+
+    }
+    
+    form #freebutton{ 
+		margin-top : 10px;
+	}
+
+    #header{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:99;
+    width:100%;
+    height:100px;
+    border-bottom:0;
+    background-color: #fff;
+    }    
+
+	#header .inner {
+		z-index: 10;
+	}
+
+	#header h1 a {
+		white-space: nowrap;
+		height: 50px;
+		width: 205px;
+		background-image: url('../img/RandingPage/logo.png');
+		background-size : cover;
+
+	}
+	
+	#header h1 img {
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+
+	#header h1 {
+		background: none;
+		float: left;
+		width: 100px;
+		padding-left: 0;
+		padding-top:0;
+		left: 20%;
+	}
+
+	#gnb {
+		position: static;
+		float: right;
+		max-width: none;
+/* 		width: 100%;
+		height: 100%; */
+		background: none;
+	
+	}
+
+	.cont {
+		position: static;
+	}
+
+	.noscroll {
+	/* 	width : 70%; */
+		overflow-y: hidden;
+		margin-top: 25px;
+	
+		
+	}
+
+	.list {
+	 	width : 100%; 
+		float: right;
+		overflow: hidden;
+		padding-left: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	#gnb a {
+	display : block;
+	}
+
+	.noscroll li img{
+		width : 100%;
+	}
+
+	# .inner {
+		position: relative;
+		/* max-width: 1000px; */
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 10px;
+		right: 20%;
+	}
+	/* 이미지들의 중앙정렬  */
+	.line .common {
+	margin : auto;
+	height : 100%;
+	}
+	li {
+		list-style : none;
+		float : left;
+	}
+	h2 {
+		margin: 0;
+		padding: 0;
+	}
+	#center1 {
+		margin-top: -13px;	
+	}
+	
+	input[type=text]::-webkit-input-placeholder {font-size:18px;}
+	input[type=text]:-moz-placeholder {font-size:18px;}
+	input[type=text]::-moz-placeholder {font-size:18px;}
+	input[type=text]:-ms-input-placeholder {font-size:18px;}
+	
+}
+address, em {
+	font-style:normal;
+}
+
+
+body address{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #eeeeee;
+}
+
+#header {
+	position: relative;
+}
+
+.inputLine {
+	
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font: Arial, San-serif;
+    border: 0;
+    background: #ffffff;
+    border:1px solid #3B5998;
+}
+
+
+.form-style-facebook input::-webkit-input-placeholder {
+   color: #777777;
+   font-weight: normal;
+   font-style: italic;
+}
+ 
+.form-style-facebook input:-moz-placeholder {
+    color: #777777;
+    font-weight: normal;
+    font-style: italic;
+}
+.form-style-facebook input:-ms-input-placeholder {
+    color: #777777;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.inputForm {
+	z-index: 10;
+	width: 100%;
+	margin-left : -2.6%;
+	margin-top : 6%;
+}
+
+#inName {
+	font-size: 40px;
+	color : #000;
+	width : 350px;
+}
+
+#inTel {
+
+	font-size: 40px;
+	width: 350px;
+	color : #000;
+}
+
+#freebutton {
+	height: 100%; 
+	font-size :39px;
+	font-weight: bold;
+	margin-left:4%;
+	
+}
+
+#contact div form {
+	position: absolute;
+
+}
+
+label {
+	color : #ffffff;
+	font-size : 15px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+

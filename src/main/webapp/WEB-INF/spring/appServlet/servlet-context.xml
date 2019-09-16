@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/task  http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<task:executor id="myexecutor" pool-size="100" />
+	<task:annotation-driven executor="myexecutor" />
+
+	<!-- <beans:bean id="myexecuter" class="java.util.concurrent.Executors" 
+		factory-method="newFixedThreadPool"> <beans:constructor-arg value="100" /> 
+		</beans:bean> <task:executor id="threadPoolTaskExecutor" pool-size="100" 
+		queue-capacity="500"/> <task:annotation-driven executor="myexecuter" /> -->
+
+	<!-- <aop:aspectj-autoproxy /> <beans:bean id="Advice" class="com.facebookc.spring.aop.Advice" 
+		/> -->
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Configuring interceptors based on URI -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**" />
+			<exclude-mapping path="/auth/**/" />
+			<exclude-mapping path="/resources/**/" />
+			<exclude-mapping path="/cron/**/" />
+			<beans:bean class="com.facebookc.spring.aop.Interceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
+
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10000000" />
+	</beans:bean>
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<context:component-scan base-package="com.facebookc.spring" />
+
+	<beans:bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="net.sf.log4jdbc.DriverSpy" />
+		<beans:property name="url"
+			value="jdbc:log4jdbc:mysql://115.68.219.6:3306/solution" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="talktab0701" />
+	</beans:bean>
+
+	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="mapperLocations"
+			value="classpath:com/facebookc/sql/*.xml" />
+	</beans:bean>
+
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0" ref="sqlSessionFactory" />
+	</beans:bean>
+
+	<beans:bean name="dataSource2"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="net.sf.log4jdbc.DriverSpy" />
+		<beans:property name="url"
+			value="jdbc:log4jdbc:mysql://45.77.21.92:3306/facebook" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="Alpha12!@#" />
+	</beans:bean>
+
+	<beans:bean id="sqlSessionFactory2" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource2" />
+		<beans:property name="mapperLocations"
+			value="classpath:com/facebookc/sql/*.xml" />
+	</beans:bean>
+
+	<beans:bean id="sqlSession2" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg index="0"
+			ref="sqlSessionFactory2" />
+	</beans:bean>
+
+</beans:beans>
