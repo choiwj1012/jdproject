@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* css 초기화 */
+ul{
+  list-style: none;
+}
+
+/* wrapper and layout */
+.wrapper{
+  width:1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header, .gnb{
+  margin:0 216px;
+}
+
+/* header */
+.header{
+  height:96px;
+  box-shadow: inset 0 -1px 0 0 #f1f1f1;
+  background-color: #fff;
+}
+.header li{
+  float:left;
+}
+.header li.logo{
+  width: 56px;
+  height: 54px;
+}
+.header li.login{
+  width:68px;
+  height:32px;
+  border-radius:3px;
+  background-color:rbga(255,255,255,0);
+}
+
+/* gnb */
+.gnb{
+  clear: both;
+  position: relative;
+  height:56px;
+  background-color: #fff;
+}
+.gnb li{
+  float:left;
+}
+.gnb li.calender{
+  width:40px;
+  height:40px;
+  border-radius:20px;
+  border:solid 1px #e0e0e0;
+  background-color: #fff;
+}
+.gnb li.calender img{
+  position: relative;
+  top:8px;
+  left:8px;
+  width:24px;
+  height:24px;
+  margin: auto;
+}
+
+.gnb li.categorylist select{
+  width:193px;
+  height:36px;
+  border-radius:3px;
+  border:solid 1px #e0e0e0;
+  background-color: #fff;
+}
+
+
+/*section*/
+.section{
+  clear: both;
+}
+
+
+/* 정당선택 */
+input[type=checkbox]{display:none;}
+input[type=checkbox] + label{
+  width:24px;
+  height:24px;
+  display:inline-block;
+  cursor:pointer;
+  line-height: 24px;
+  padding-left: 24px;
+}
+
+/* party-theminjoo checkbox */
+input#party_1[type=checkbox] + label{background:url('../images/party-theminjoo-off.png') left/26px no-repeat;}
+input#party_1[type=checkbox]:checked + label{background-image:url('../images/party-theminjoo.png');}
+
+/* party-liberty checkbox */
+input#party_2[type=checkbox] + label{background:url('../images/party-liberty-off.png') left/26px no-repeat;}
+input#party_2[type=checkbox]:checked + label{background-image:url('../images/party-liberty.png');}
+
+/* party-liberty checkbox */
+input#party_3[type=checkbox] + label{background:url('../images/party-bareunmirae-off.png') left/26px no-repeat;}
+input#party_3[type=checkbox]:checked + label{background-image:url('../images/party-bareunmirae.png');}
+
+/* party-liberty checkbox */
+input#party_4[type=checkbox] + label{background:url('../images/party-justice-off.png') left/26px no-repeat;}
+input#party_4[type=checkbox]:checked + label{background-image:url('../images/party-justice.png');}
+
+/* party-liberty checkbox */
+input#party_5[type=checkbox] + label{background:url('../images/party-ppl-21-off.png') left/26px no-repeat;}
+input#party_5[type=checkbox]:checked + label{background-image:url('../images/party-ppl-21.png');}
+
+/* party-liberty checkbox */
+input#party_6[type=checkbox] + label{background:url('../images/party-orp-off.png') left/26px no-repeat;}
+input#party_6[type=checkbox]:checked + label{background-image:url('../images/party-orp.png');}
+
+/* party-liberty checkbox */
+input#party_7[type=checkbox] + label{background:url('../images/party-peace-off.png') left/26px no-repeat;}
+input#party_7[type=checkbox]:checked + label{background-image:url('../images/party-peace.png');}
+
+/* section area */
+
+/* article area */
+.articleWrapper{
+  width:1080px;
+}
