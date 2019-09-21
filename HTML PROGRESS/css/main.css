@@ -1,39 +1,99 @@
 @charset "UTF-8";
 
 /* css 초기화 */
-ul{
-  list-style: none;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* wrapper and layout */
 .wrapper{
+  position: relative;
   width:1440px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.header, .gnb{
-  margin:0 216px;
+  height:auto;
+  margin:0 auto;
+  padding:0;
+  background-color: #f3f8fc;
 }
 
 /* header */
 .header{
+  position: relative;
   height:96px;
   box-shadow: inset 0 -1px 0 0 #f1f1f1;
   background-color: #fff;
+}
+.header_wrapper{
+  position: relative;
+  width:1000px;
+  margin:0 auto;
 }
 .header li{
   float:left;
 }
 .header li.logo{
-  width: 56px;
-  height: 54px;
+  position: absolute;
+  top:21px;
+  left:0px;
 }
 .header li.login{
-  width:68px;
+  position: absolute;
+  top:32px;
+  right:0px;
+  width:72px;
   height:32px;
   border-radius:3px;
-  background-color:rbga(255,255,255,0);
+  border : solid 1px #e0e0e0;
+  background-color:#fff;
+}
+.header li.login span.loginbutton{
+  position: absolute;
+  top:6px;
+  right:12px;
 }
 
 /* gnb */
@@ -43,10 +103,22 @@ ul{
   height:56px;
   background-color: #fff;
 }
+.gnb_wrapper{
+  position: relative;
+  width:1000px;
+  margin:0 auto;
+}
+.gnb ul{
+  padding:8px 0;
+}
 .gnb li{
   float:left;
 }
+
+/* 달력 버튼 */
 .gnb li.calender{
+  position: absolute;
+  left:8px;
   width:40px;
   height:40px;
   border-radius:20px;
@@ -62,6 +134,13 @@ ul{
   margin: auto;
 }
 
+/* 주제선택 셀렉트박스 */
+.gnb li.categorylist {
+  position: absolute;
+  top:10px;
+  left:432px;
+}
+
 .gnb li.categorylist select{
   width:193px;
   height:36px;
@@ -70,55 +149,209 @@ ul{
   background-color: #fff;
 }
 
-
-/*section*/
-.section{
-  clear: both;
+/* 정당선택 텍스트 */
+.gnb li.partychoicetext{
+  position:absolute;
+  top:22px;
+  left:705px;
+  font-size: 11px;
+  line-height: 12px;
+  color: #666;
 }
 
+/* 정당선택 아이콘 버튼 */
+.gnb li.partychoice{
+  position:absolute;
+  left:758px;
+  margin-left:12px;
+  padding : 8px 0;
+}
 
 /* 정당선택 */
 input[type=checkbox]{display:none;}
 input[type=checkbox] + label{
-  width:24px;
-  height:24px;
+  width:26px;
+  height:26px;
   display:inline-block;
   cursor:pointer;
-  line-height: 24px;
-  padding-left: 24px;
 }
 
 /* party-theminjoo checkbox */
-input#party_1[type=checkbox] + label{background:url('../images/party-theminjoo-off.png') left/26px no-repeat;}
+input#party_1[type=checkbox] + label{background:url('../images/party-theminjoo-off.png') no-repeat;}
 input#party_1[type=checkbox]:checked + label{background-image:url('../images/party-theminjoo.png');}
 
 /* party-liberty checkbox */
-input#party_2[type=checkbox] + label{background:url('../images/party-liberty-off.png') left/26px no-repeat;}
+input#party_2[type=checkbox] + label{background:url('../images/party-liberty-off.png') no-repeat;}
 input#party_2[type=checkbox]:checked + label{background-image:url('../images/party-liberty.png');}
 
 /* party-liberty checkbox */
-input#party_3[type=checkbox] + label{background:url('../images/party-bareunmirae-off.png') left/26px no-repeat;}
+input#party_3[type=checkbox] + label{background:url('../images/party-bareunmirae-off.png') no-repeat;}
 input#party_3[type=checkbox]:checked + label{background-image:url('../images/party-bareunmirae.png');}
 
 /* party-liberty checkbox */
-input#party_4[type=checkbox] + label{background:url('../images/party-justice-off.png') left/26px no-repeat;}
+input#party_4[type=checkbox] + label{background:url('../images/party-justice-off.png') no-repeat;}
 input#party_4[type=checkbox]:checked + label{background-image:url('../images/party-justice.png');}
 
 /* party-liberty checkbox */
-input#party_5[type=checkbox] + label{background:url('../images/party-ppl-21-off.png') left/26px no-repeat;}
+input#party_5[type=checkbox] + label{background:url('../images/party-ppl-21-off.png') no-repeat;}
 input#party_5[type=checkbox]:checked + label{background-image:url('../images/party-ppl-21.png');}
 
 /* party-liberty checkbox */
-input#party_6[type=checkbox] + label{background:url('../images/party-orp-off.png') left/26px no-repeat;}
+input#party_6[type=checkbox] + label{background:url('../images/party-orp-off.png') no-repeat;}
 input#party_6[type=checkbox]:checked + label{background-image:url('../images/party-orp.png');}
 
 /* party-liberty checkbox */
-input#party_7[type=checkbox] + label{background:url('../images/party-peace-off.png') left/26px no-repeat;}
+input#party_7[type=checkbox] + label{background:url('../images/party-peace-off.png') no-repeat;}
 input#party_7[type=checkbox]:checked + label{background-image:url('../images/party-peace.png');}
 
 /* section area */
+.section{
+  position: relative;
+  height:1000px; /* 향후 삭제할 것 */
+  clear: both;
+}
+
+/* left_sdvertisement */
+.left_advertisement{
+  position: absolute;
+  top:20px;
+  left:48px;
+  width:180px;
+}
 
 /* article area */
 .articleWrapper{
+  position: absolute;
   width:1080px;
+  top:20px;
+  left:180px;
+}
+
+/* article */
+
+/* article title */
+.articleWrapper .title_1 .title{
+  position: relative;
+  width:1080px;
+  height:48px;
+  background-color: rgba(0, 47, 99, 0.1);
+}
+.articleWrapper .title_1 .title p{
+  display: inline;
+  font-family: NotoSansKR-Bold;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.27;
+  letter-spacing: 0.5px;
+  text-align: right;
+  color: #666666;
+}
+.articleWrapper .title_1 .title p:nth-child(1){
+  position: absolute;
+  top:18px;
+  left:40px;
+}
+.articleWrapper .title_1 .title p:nth-child(2){
+  position: absolute;
+  top:18px;
+  right:44px;
+}
+
+/* main_article */
+.main_article{
+  position: relative;
+  width : 960px;
+  height: 300px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* article information */
+.main_article li.article_information{
+  position: absolute;
+  top:32px;
+}
+.main_article li.article_information li.date_circle{
+  position: absolute;
+  left:-6px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 196, 255, 0.5);
+  border: solid 3px #00a3ff;
+  background-color: #ffffff;
+}
+.main_article li.article_information li.article_date{
+  position: absolute;
+  top:-2px;
+  left:16px;
+  width:300px;
+}
+
+/* korea_article */
+.korea_article{
+  position: absolute;
+  top:56px;
+}
+
+/* japan_article */
+.japan_article{
+  position: absolute;
+  top:92px;
+}
+
+/* right_sdvertisement */
+.right_advertisement{
+  position: absolute;
+  top:20px;
+  left:1280px;
+  width:180px;
+}
+
+/* footer */
+footer{
+  position: relative;
+  clear: both;
+  width:1000px;
+  height:auto;
+  margin: 0 auto;
+}
+footer li{
+  float:left;
+}
+footer>ul:nth-child(1){
+  font-family: NotoSansKR;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  color: #666666;
+}
+footer>ul:nth-child(2){
+  clear:both;
+  font-family: NotoSansKR;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  color: #666666;
+}
+
+footer p{
+  clear: both;
+  font-family: NotoSansKR;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  color: #666666;
 }
