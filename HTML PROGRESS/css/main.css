@@ -5,7 +5,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,10 +50,14 @@ table {
 }
 
 /* wrapper and layout */
+html, body{
+  height:100%;
+}
+
 .wrapper{
   position: relative;
   width:1440px;
-  height:auto;
+  height:1450px;
   margin:0 auto;
   padding:0;
   background-color: #f3f8fc;
@@ -205,23 +208,22 @@ input#party_7[type=checkbox] + label{background:url('../images/party-peace-off.p
 input#party_7[type=checkbox]:checked + label{background-image:url('../images/party-peace.png');}
 
 /* section area */
-.section{
+div.section{
   position: relative;
-  height:1000px; /* 향후 삭제할 것 */
-  clear: both;
+  height:1200px;
 }
 
 /* left_sdvertisement */
 .left_advertisement{
-  position: absolute;
+  position:absolute;
   top:20px;
   left:48px;
   width:180px;
 }
 
 /* article area */
-.articleWrapper{
-  position: absolute;
+div.articleWrapper{
+  position:absolute;
   width:1080px;
   top:20px;
   left:180px;
@@ -230,6 +232,9 @@ input#party_7[type=checkbox]:checked + label{background-image:url('../images/par
 /* article */
 
 /* article title */
+.articleWrapper .title_1{
+  height:auto;
+}
 .articleWrapper .title_1 .title{
   position: relative;
   width:1080px;
@@ -263,29 +268,32 @@ input#party_7[type=checkbox]:checked + label{background-image:url('../images/par
 .main_article{
   position: relative;
   width : 960px;
-  height: 300px;
+  height: 200px;
   margin: 0 auto;
   border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.main_article ul li{
+  float:left;
 }
 
 /* article information */
 .main_article li.article_information{
-  position: absolute;
+  position:absolute;
   top:32px;
 }
 .main_article li.article_information li.date_circle{
-  position: absolute;
+  position:absolute;
   left:-6px;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 8px;
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:8px;
   box-shadow: 0 0 8px 0 rgba(0, 196, 255, 0.5);
   border: solid 3px #00a3ff;
   background-color: #ffffff;
 }
 .main_article li.article_information li.article_date{
-  position: absolute;
+  position:absolute;
   top:-2px;
   left:16px;
   width:300px;
@@ -293,14 +301,107 @@ input#party_7[type=checkbox]:checked + label{background-image:url('../images/par
 
 /* korea_article */
 .korea_article{
-  position: absolute;
+  position:relative;
   top:56px;
+  left:15.5px;
+  margin-top:6px;
+  padding:4px 18px;
+  border-radius:16px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.04);
+  border:solid 1px rgba(0, 0, 0, 0.06);
+  background-image:linear-gradient(to bottom, #ffffff, #ffffff);
+}
+.korea_article p{
+  display:inline-block;
+  font-family: NotoSansKR;
+  font-size: 13px;
+  color: #303030;
+  vertical-align:middle;
+}
+.korea_article p>img{
+  margin-right:6px;
+  vertical-align:middle;
 }
 
 /* japan_article */
-.japan_article{
-  position: absolute;
-  top:92px;
+li.japan_article{
+  clear: both;
+  position:relative;
+  top:56px;
+  left:15.5px;
+  margin-top:6px;
+  margin-bottom:6px;
+  padding:4px 18px;
+  border-radius:16px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.04);
+  border:solid 1px rgba(0, 0, 0, 0.06);
+  background-image:linear-gradient(to bottom, #ffffff, #ffffff);
+}
+li.japan_article p{
+  display:inline-block;
+  font-family: NotoSansKR;
+  font-size: 13px;
+  color: #303030;
+  vertical-align:middle;
+}
+li.japan_article p>img{
+  margin-right:6px;
+  vertical-align:middle;
+}
+
+/* party_article_1 */
+li.party_1{
+  clear: both;
+  position:relative;
+  top:56px;
+}
+li.party_1 p{
+  display:inline-block;
+  padding:6px 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(255, 28, 28, 0.12);
+  background-image: linear-gradient(to bottom, #ff3838, #f12c2c);
+  font-family: NotoSansKR;
+  font-size: 13px;
+  color: #fff;
+  vertical-align:middle;
+}
+li.party_1 p:nth-child(1){
+  margin-left:57.5px;
+  background: transparent;
+  box-shadow:none;
+}
+li.party_1 p>img{
+  margin-right:-18px;
+  vertical-align:middle;
+}
+
+/* party_article_2 */
+li.party_2{
+  clear: both;
+  position:relative;
+  top:56px;
+}
+li.party_2 p{
+  display:inline-block;
+  padding:6px 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px 0 rgba(28, 98, 255, 0.12);
+  background-image: linear-gradient(to bottom, #1598de, #2b78e7);
+  font-family: NotoSansKR;
+  font-size: 13px;
+  color: #fff;
+  vertical-align:middle;
+  background-color: red;
+}
+li.party_2 p:nth-child(1){
+  margin-left:57.5px;
+  background: transparent;
+  box-shadow:none;
+}
+li.party_2 p>img{
+  margin-right:-18px;
+  vertical-align:middle;
 }
 
 /* right_sdvertisement */
@@ -313,10 +414,8 @@ input#party_7[type=checkbox]:checked + label{background-image:url('../images/par
 
 /* footer */
 footer{
-  position: relative;
-  clear: both;
+  overflow: hidden;
   width:1000px;
-  height:auto;
   margin: 0 auto;
 }
 footer li{
